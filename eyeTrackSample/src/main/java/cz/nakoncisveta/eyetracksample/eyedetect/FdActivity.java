@@ -2,6 +2,7 @@ package cz.nakoncisveta.eyetracksample.eyedetect;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -84,6 +85,8 @@ public class FdActivity extends Activity implements CvCameraViewListener2 {
     double xCenter = -1;
     double yCenter = -1;
 
+    private int cameraIndex = 1;
+
     private BaseLoaderCallback  mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
         public void onManagerConnected(int status) {
@@ -142,8 +145,9 @@ public class FdActivity extends Activity implements CvCameraViewListener2 {
                         Log.e(TAG, "Failed to load cascade. Exception thrown: " + e);
                     }
                     mOpenCvCameraView.enableFpsMeter();
-                    mOpenCvCameraView.setCameraIndex(1);
+                    mOpenCvCameraView.setCameraIndex(cameraIndex);
                     mOpenCvCameraView.enableView();
+
                 } break;
                 default:
                 {
@@ -489,5 +493,6 @@ public class FdActivity extends Activity implements CvCameraViewListener2 {
     {
         learn_frames = 0;
     }
+
 
 }

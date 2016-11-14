@@ -7,13 +7,16 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/fd_activity_surface_view" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:onClick="onRecreateClick"
-        android:text="Recreate" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="onRecreateClick"
+            android:text="Recreate" />
+
 
     <TextView
         android:id="@+id/method"
@@ -45,4 +48,13 @@
         </SeekBar>
 
     </LinearLayout>
+
+    <!--Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSwitchClick"
+        android:text="Switch Camera"
+        android:layout_above="@+id/method"
+        android:layout_alignLeft="@+id/method"
+        android:layout_marginBottom="67dp" /-->
 </RelativeLayout>
